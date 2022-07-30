@@ -28,8 +28,8 @@ import taboolib.platform.util.sendLang
     RuntimeDependency(value = "com.alibaba:fastjson:1.2.79"),
     RuntimeDependency(
         value = "com.faithl:milim:1.0.4",
-        repository = "http://localhost:8090/repository/maven-releases/"
-        //repository = "https://repo.tabooproject.org/repository/releases/"
+        //repository = "http://localhost:8090/repository/maven-releases/"
+        repository = "https://repo.tabooproject.org/repository/releases/"
     )
 )
 object FaithlPoint : Plugin() {
