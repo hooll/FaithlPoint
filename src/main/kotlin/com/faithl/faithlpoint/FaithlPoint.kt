@@ -6,7 +6,6 @@ import com.faithl.faithlpoint.internal.display.PointMenu
 import com.faithl.faithlpoint.internal.point.Point
 import com.faithl.faithlpoint.util.JsonUtil
 import com.faithl.milim.MilimAPI
-import org.bukkit.Bukkit
 import org.bukkit.entity.Player
 import taboolib.common.env.RuntimeDependencies
 import taboolib.common.env.RuntimeDependency
@@ -28,8 +27,9 @@ import taboolib.platform.util.sendLang
 @RuntimeDependencies(
     RuntimeDependency(value = "com.alibaba:fastjson:1.2.79"),
     RuntimeDependency(
-        value = "com.faithl:milim:1.0.3",
-        repository = "https://repo.tabooproject.org/repository/releases/",
+        value = "com.faithl:milim:1.0.4",
+        repository = "http://localhost:8090/repository/maven-releases/"
+        //repository = "https://repo.tabooproject.org/repository/releases/"
     )
 )
 object FaithlPoint : Plugin() {
@@ -59,6 +59,7 @@ object FaithlPoint : Plugin() {
 
     fun init() {
         try {
+
             val type = setting.getString("Options.Database.Type")!!
             val host = setting.getString("Options.Database.Host")!!
             val database = setting.getString("Options.Database.Database")!!
@@ -82,11 +83,6 @@ object FaithlPoint : Plugin() {
             for (player in onlinePlayers()) {
                 player.setupDataContainer()
             }
-        }
-        if (Bukkit.getPluginManager().isPluginEnabled("AttributePlus")) {
-            console().sendLang("Plugin-Hooked", "AttributePlus")
-        } else {
-            disablePlugin()
         }
     }
 

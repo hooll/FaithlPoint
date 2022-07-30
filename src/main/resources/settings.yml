@@ -1,5 +1,5 @@
 Options:
-  #AttributePlus/OriginAttribute/SX-Attribute
+  #AttributePlus/AttributeSystem/OriginAttribute/SX-Attribute  (AP/AS/OA/SX)
   Attribute-Plugin: 'AttributePlus'
   #数据库配置
   Database:

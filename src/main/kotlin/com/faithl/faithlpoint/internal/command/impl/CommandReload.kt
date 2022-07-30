@@ -1,6 +1,7 @@
 package com.faithl.faithlpoint.internal.command.impl
 
 import com.faithl.faithlpoint.FaithlPoint
+import com.faithl.faithlpoint.api.FaithlPointAPI
 import com.faithl.faithlpoint.internal.conf.Loader
 import taboolib.common.platform.ProxyCommandSender
 import taboolib.common.platform.command.subCommand
@@ -28,6 +29,9 @@ object CommandReload {
                 it.buildMenu(sender.cast())
             }
             sender.sendLang("Plugin-Reloaded", pluginVersion,KotlinVersion.CURRENT.toString())
+            taboolib.platform.util.onlinePlayers.forEach {
+                FaithlPointAPI.updateAttribute(it)
+            }
         }
     }
 

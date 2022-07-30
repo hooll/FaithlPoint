@@ -49,7 +49,6 @@ object FaithlPointAPI {
                     list.add("$it: $num")
                 }
             }
-
             MilimAPI.setAttribute("FaithlPoint", player, list)
         }
     }
