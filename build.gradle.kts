@@ -30,6 +30,7 @@ taboolib {
             name("AttributePlus").optional(true)
             name("OriginAttribute").optional(true)
             name("SX-Attribute").optional(true)
+            name("AttributeSystem").optional(true)
             name("Zaphkiel").optional(true)
             name("PlaceholderAPI").optional(true)
         }
